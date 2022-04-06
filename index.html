@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JacensSkateshop3.0</title>
-    <link rel="stylesheet" href="vendor/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="vendor/bootstrap-3.3.7-dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="vendor/font-awesome-4.7.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">JacensSkateshop</a>
-            </div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">JacensSkateshop</a>
+        </div>
         <ul class="nav navbar-nav">
-            <li>
-                <a onclick="showItems('skateboards')" >Skateboards</a>
-            </li>
-            <li>
-                <a onclick="showItems('backpacks')" >Backpacks</a>
-            </li>
-            <li>
-                <a onclick="showItems('shoes')" >Shoes</a>
-            </li>
-            <li>
-                <a onclick="showItems('shirts')" >Shirts</a>
-            </li>
-            <li>
-                <a onclick="showItems('pants')" >Pants</a>
-            </li>
-            <li>
-                <a onclick="showItems('hoodies')" >Hoodies</a>
-            </li>
-            <li>
-                <a onclick="showItems('hats')" >Hats</a>
-            </li>
+          <li>
+            <a onclick="showSkateboards('skateboards')">Skateboards</a>
+          </li>
+          <li>
+            <a onclick="showBackpacks('backpacks')">Backpacks</a>
+          </li>
+          <li>
+            <a onclick="showShoes('shoes')">Shoes</a>
+          </li>
+          <li>
+            <a onclick="showShirts('shirts')">Shirts</a>
+          </li>
+          <li>
+            <a onclick="showPants('pants')">Pants</a>
+          </li>
+          <li>
+            <a onclick="showHoodies('hoodies')">Hoodies</a>
+          </li>
+          <li>
+            <a onclick="showHats('hats')">Hats</a>
+          </li>
         </ul>
-    </div>
+      </div>
     </nav>
     <div class="homepage for-sale row">
-        <h1>Welcome to JacensSkateShop</h1>
-        <hr id="hr-1">
-        <h3>Here you can view all the items in my shop!</h3>
-        <hr id="hr-2">
+      <h1>Welcome to JacensSkateShop</h1>
+      <hr id="hr-1" />
+      <h3>Here you can view all the items in my shop!</h3>
+      <hr id="hr-2" />
     </div>
     <div class="container buy-items">
-        <div id="skateboards" class="for-sale row"></div>
-        <div id="" class="for-sale row"></div>
-        <div id="tshirts" class="for-sale row"></div>
-        <div id="pants" class="for-sale row"></div>
-        <div id="shoes" class="for-sale row"></div>
-        <div id="socks" class="for-sale row"></div>
+      <div id="skateboards" class="for-sale row"></div>
+      <div id="backpacks" class="for-sale row"></div>
+      <div id="shoes" class="for-sale row"></div>
+      <div id="shirts" class="for-sale row"></div>
+      <div id="pants" class="for-sale row"></div>
+      <div id="hoodies" class="for-sale row"></div>
+      <div id="hats" class="for-sale row"></div>
     </div>
     <script src="vendor/jquery.js"></script>
     <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

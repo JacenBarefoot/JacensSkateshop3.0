@@ -1,107 +1,107 @@
 body {
-    font-family: 'Lato', sans-serif;
-}
-
-.font-20px {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .font-20px {
     font-size: 20px;
     float: left;
-}
-
-.navbar {
+  }
+  
+  .navbar {
     background-color: steelblue;
-}
-
-.navbar-cart {
+  }
+  
+  .navbar-cart {
     font-size: 20px;
     color: black;
     padding-left: 20px;
     padding-right: 20px;
     font-weight: bold;
-}
-
-.fa-plus-square {
+  }
+  
+  .fa-plus-square {
     cursor: pointer;
-}
-
-a {
+  }
+  
+  a {
     color: ghostwhite !important;
-}
-
-a:hover {
+  }
+  
+  a:hover {
     color: grey;
-}
-
-.navbar-cart:hover {
+  }
+  
+  .navbar-cart:hover {
     color: black;
-}
-
-.homepage {
+  }
+  
+  .homepage {
     text-align: center;
     margin-top: 8%;
-}
-
-#hr-1 {
+  }
+  
+  #hr-1 {
     width: 50em;
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(4, 143, 4);
     padding: 0;
-}
-
-#hr-2 {
+  }
+  
+  #hr-2 {
     width: 40em;
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(4, 143, 4);
     padding: 0;
-}
-
-#hr-3 {
+  }
+  
+  #hr-3 {
     width: 30em;
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(4, 143, 4);
     padding: 0;
-}
-
-#hr-4 {
+  }
+  
+  #hr-4 {
     width: 20em;
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(4, 143, 4);
     padding: 0;
-}
-
-#hr-5 {
+  }
+  
+  #hr-5 {
     width: 10em;
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid rgb(4, 143, 4);
     padding: 0;
-}
-
-.panel-body {
+  }
+  
+  .panel-body {
     height: 435px;
-}
-
-.img-center {
+  }
+  
+  .img-center {
     text-align: center;
-}
-
-.container-fluid {
+  }
+  
+  .container-fluid {
     cursor: pointer;
-}
-
-#clothing-title {
+  }
+  
+  #clothing-title {
     color: steelblue;
-}
-
-img{
+  }
+  
+  img {
     width: 230px;
     height: 260px;
-}
+  }
