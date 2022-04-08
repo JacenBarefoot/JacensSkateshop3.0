@@ -238,20 +238,6 @@ var PRODUCTS = {
         price: 27.95,
         image: "images/shirts/backPrimitive4.webp",
       },
-      //     {
-      //         type: "shirts",
-      //         shirtName: "Primitive x Dragon Ball Super Goku Black Rose Washed T-Shirt",
-      //         shirtSize: "Small, Medium, XL",
-      //         price: 25.95,
-      //         image: "images/shirts/backPrimitive1.webp",
-      //       },
-      //       {
-      //         type: "shirts",
-      //         shirtName: "Primitive x Dragon Ball Super Goku Black Rose Washed T-Shirt",
-      //         shirtSize: "Medium",
-      //         price: 25.95,
-      //         image: "images/shirts/backPrimitive1.webp",
-      //       },
     ],
     pants: [
       {
@@ -413,12 +399,6 @@ var PRODUCTS = {
         price: 14.95,
         image: "images/hats/Vans1.webp",
       },
-      {
-        type: "hats",
-        hatName: "Primitive x Naruto Shippuden Sasuke Strike Bucket Black Hat",
-        price: 14.95,
-        image: "images/hats/primitive3.webp",
-      },
     ],
   };
   
@@ -508,13 +488,11 @@ var PRODUCTS = {
   
   function showSkateboards(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -529,13 +507,11 @@ var PRODUCTS = {
   
   function showBackpacks(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -550,13 +526,11 @@ var PRODUCTS = {
   
   function showShoes(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -571,13 +545,11 @@ var PRODUCTS = {
   
   function showShirts(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -592,13 +564,10 @@ var PRODUCTS = {
   
   function showPants(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
-  
+    $(".all-items").show();
+    $(".products").hide();
     var html =
-      '<br><br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -613,13 +582,11 @@ var PRODUCTS = {
   
   function showHoodies(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]
@@ -634,13 +601,11 @@ var PRODUCTS = {
   
   function showHats(itemtype) {
     $("#" + itemtype).removeClass("hide");
-    $(".buy-items").show();
-    $(".for-sale").hide();
-    $("#cart").addClass("hide").removeClass("show");
-    $("#sell-item-form").addClass("hide").removeClass("show");
+    $(".all-items").show();
+    $(".products").hide();
   
     var html =
-      '<br><br><br><h1 id="clothing-title">' +
+      '<h1 id="clothing-title">' +
       capitalizeFirstLetter(itemtype) +
       "</h1><br>" +
       PRODUCTS[itemtype]

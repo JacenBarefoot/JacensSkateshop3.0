@@ -9,14 +9,18 @@ body {
   
   .navbar {
     background-color: steelblue;
+    height: 75px;
+    font-size: 17px;
+    padding-top: 0.9%;
   }
-  
-  .navbar-cart {
-    font-size: 20px;
-    color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bold;
+
+  li{
+      padding-left: 9px;
+      padding-right: 9px;
+  }
+
+  .navbar-brand{
+      font-size: 25px;
   }
   
   .fa-plus-square {
@@ -25,10 +29,12 @@ body {
   
   a {
     color: ghostwhite !important;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
-  a:hover {
-    color: grey;
+
+  li a:hover{
+      color:darkgrey !important;
   }
   
   .navbar-cart:hover {
@@ -37,7 +43,7 @@ body {
   
   .homepage {
     text-align: center;
-    margin-top: 8%;
+    margin-top: 12%;
   }
   
   #hr-1 {
@@ -45,7 +51,7 @@ body {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid rgb(4, 143, 4);
+    border-top: 1px solid steelblue;
     padding: 0;
   }
   
@@ -54,34 +60,7 @@ body {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid rgb(4, 143, 4);
-    padding: 0;
-  }
-  
-  #hr-3 {
-    width: 30em;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(4, 143, 4);
-    padding: 0;
-  }
-  
-  #hr-4 {
-    width: 20em;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(4, 143, 4);
-    padding: 0;
-  }
-  
-  #hr-5 {
-    width: 10em;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid rgb(4, 143, 4);
+    border-top: 1px solid steelblue;
     padding: 0;
   }
   
@@ -99,6 +78,7 @@ body {
   
   #clothing-title {
     color: steelblue;
+    text-align: center;
   }
   
   img {
