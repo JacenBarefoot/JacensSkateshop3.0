@@ -19,8 +19,7 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a onClick="window.location.reload();" class="navbar-brand" href="#">JacensSkateshop</a>
-
+          <a class="navbar-brand" href="#">JacensSkateshop</a>
         </div>
         <ul class="nav navbar-nav">
           <li>
@@ -44,6 +43,12 @@
           <li>
             <a onclick="showHats('hats')">Hats</a>
           </li>
+          <li>
+            <a class="navbar-cart cart-total" href="#cart" onclick="showCart()">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart:
+              $0.00</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
@@ -62,6 +67,7 @@
       <div id="hoodies" class="products row"></div>
       <div id="hats" class="products row"></div>
     </div>
+    <div class="container col-lg-12 col-sm-12 hide" id="cart"></div>
     <script src="vendor/jquery.js"></script>
     <script src="vendor/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
     <script src="index.js"></script>

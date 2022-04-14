@@ -1,87 +1,87 @@
 body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .font-20px {
-    font-size: 20px;
-    float: left;
-  }
-  
-  .navbar {
-    background-color: steelblue;
-    height: 75px;
-    font-size: 17px;
-    padding-top: 0.9%;
-  }
+  font-family: "Lato", sans-serif;
+}
 
-  li{
-      padding-left: 9px;
-      padding-right: 9px;
-  }
+.font-20px {
+  font-size: 20px;
+  float: left;
+}
 
-  .navbar-brand{
-      font-size: 25px;
-  }
-  
-  .fa-plus-square {
-    cursor: pointer;
-  }
-  
-  a {
-    color: ghostwhite !important;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.navbar {
+  background-color: steelblue;
+  height: 75px;
+  font-size: 17px;
+  padding-top: 0.9%;
+}
 
-  li a:hover{
-      color:darkgrey !important;
-  }
-  
-  .navbar-cart:hover {
-    color: black;
-  }
-  
-  .homepage {
-    text-align: center;
-    margin-top: 12%;
-  }
-  
-  #hr-1 {
-    width: 50em;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid steelblue;
-    padding: 0;
-  }
-  
-  #hr-2 {
-    width: 40em;
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid steelblue;
-    padding: 0;
-  }
-  
-  .panel-body {
-    height: 435px;
-  }
-  
-  .img-center {
-    text-align: center;
-  }
-  
-  .container-fluid {
-    cursor: pointer;
-  }
-  
-  #clothing-title {
-    color: steelblue;
-    text-align: center;
-  }
-  
-  img {
-    width: 230px;
-    height: 260px;
-  }
+li {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.fa-plus-square {
+  cursor: pointer;
+}
+
+a {
+  color: ghostwhite !important;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+li a:hover {
+  background-color: darkslateblue !important;
+}
+
+.navbar-cart:hover {
+  color: black;
+}
+
+.homepage {
+  text-align: center;
+  margin-top: 12%;
+}
+
+#hr-1 {
+  width: 50em;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid steelblue;
+  padding: 0;
+}
+
+#hr-2 {
+  width: 40em;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid steelblue;
+  padding: 0;
+}
+
+.panel-body {
+  height: 435px;
+}
+
+.img-center {
+  text-align: center;
+}
+
+.container-fluid {
+  cursor: pointer;
+}
+
+#clothing-title {
+  color: steelblue;
+  text-align: center;
+}
+
+img {
+  width: 230px;
+  height: 260px;
+}
