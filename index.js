@@ -416,7 +416,10 @@ function skateboards(x) {
     "<p>Board Size: " + x.boardSize + "in</p>",
     "<p>Wheel Size: " + x.wheelSize + "cm</p>",
     "<p>Wheel Color: " + x.wheelColor + "</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price:  $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addSkateboardsToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success skate-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -428,7 +431,10 @@ function backpacks(x) {
     "<p>Brand: " + x.bagName + "</p>",
     "<p>Bag Size: " + x.bagSize + "</p>",
     "<p>Waterproof?: " + x.waterproof + "</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price:  $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addBackpacksToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success backpack-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -440,7 +446,10 @@ function shoes(x) {
     "<p>Shoes Name: " + x.shoeName + "</p>",
     "<p>Shoes Type: " + x.shoeType + "</p>",
     "<p>Shoes Size: " + x.shoeSize + "in</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price:  $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addShoesToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -451,7 +460,10 @@ function shirts(x) {
     '<p class="img-center"><img src="' + x.image + '"/></p>',
     "<p>Shirt: " + x.shirtName + "</p>",
     "<p>Shirt Sizes: " + x.shirtSize + "</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price: $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addShirtsToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -462,7 +474,10 @@ function pants(x) {
     '<p class="img-center"><img src="' + x.image + '"/></p>',
     "<p>Pants: " + x.pantsName + "</p>",
     "<p>Pants Sizes: " + x.pantsSize + "</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price: $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addPantsToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -473,7 +488,10 @@ function hoodies(x) {
     '<p class="img-center"><img src="' + x.image + '"/></p>',
     "<p>Hoodie Name: " + x.hoodieName + "</p>",
     "<p>Hoodie Size: " + x.hoodieSize + "</p>",
-    "<p>Price:  $" + x.price + "</p></div></div></div>",
+    "<p>Price: $" + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addHoodiesToCart(' +
+      JSON.stringify(x) +
+      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -483,17 +501,23 @@ function hats(x) {
     '<div class="panel panel-default"><div class="panel-body">',
     '<p class="img-center"><img src="' + x.image + '"/></p>',
     "<p>Hat: " + x.hatName + "</p>",
-    '<p class="itemPrice">Price:  $' + x.price + "</p>",
-    '<p class="img-center"><button onclick=\'addToCart(' +
+    '<p>Price: $' + x.price + "</p>",
+    '<p class="img-center"><button onclick=\'addHatsToCart(' +
       JSON.stringify(x) +
       ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
+}
+
+function showHome() {
+  $(".products").show();
+  $(".all-items").hide();
 }
 
 function showSkateboards(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
 
   var html =
     '<h1 id="clothing-title">' +
@@ -513,6 +537,7 @@ function showBackpacks(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
 
   var html =
     '<h1 id="clothing-title">' +
@@ -532,6 +557,7 @@ function showShoes(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
 
   var html =
     '<h1 id="clothing-title">' +
@@ -551,6 +577,7 @@ function showShirts(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
 
   var html =
     '<h1 id="clothing-title">' +
@@ -570,6 +597,8 @@ function showPants(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
+
   var html =
     '<h1 id="clothing-title">' +
     capitalizeFirstLetter(itemtype) +
@@ -588,6 +617,7 @@ function showHoodies(itemtype) {
   $("#" + itemtype).removeClass("hide");
   $(".all-items").show();
   $(".products").hide();
+  $("#cart").addClass("hide").removeClass("show");
 
   var html =
     '<h1 id="clothing-title">' +
@@ -623,7 +653,40 @@ function showHats(itemtype) {
     .show();
 }
 
-function addToCart(x) {
+function addSkateboardsToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6 item-div">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Brand: " + 
+      x.boardBrand + 
+      "</p>" +
+      "<p>Board Size: " + 
+      x.boardSize + 
+      "in</p>" +
+      "<p>Wheel Size: " + 
+      x.wheelSize + 
+      "cm</p>" +
+      "<p>Wheel Color: " + 
+      x.wheelColor + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success" style="margin-top: -5em; margin-left: 14em;">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your skateboard to the cart!");
+  var itemtype = x.type;
+  showSkateboards(itemtype);
+}
+
+function addHatsToCart(x) {
   TOTAL_SALE += x.price;
   var html =
     '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
@@ -642,8 +705,120 @@ function addToCart(x) {
       "</p>" +
       '<p><button type="button" class="removeItem btn btn-success">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   );
+  alert("Added your hat to the cart!");
   var itemtype = x.type;
   showHats(itemtype);
+}
+
+function addHoodiesToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Hoodie Name: " + 
+      x.hoodieName + 
+      "</p>" +
+      "<p>Hoodie Size: " + 
+      x.hoodieSize + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your hoodie to the cart!");
+  var itemtype = x.type;
+  showHoodies(itemtype);
+}
+
+function addShirtsToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Shirt Name: " + 
+      x.shirtName + 
+      "</p>" +
+      "<p>Shirt Size: " + 
+      x.shirtSize + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your shirt to the cart!");
+  var itemtype = x.type;
+  showShirts(itemtype);
+}
+
+function addPantsToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Pants Name: " + 
+      x.pantsName + 
+      "</p>" +
+      "<p>Pants Size: " + 
+      x.pantsSize + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your pants to the cart!");
+  var itemtype = x.type;
+  showPants(itemtype);
+}
+
+function addShoesToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Shoes Name: " + 
+      x.shoeName + 
+      "</p>" +
+      "<p>Shoes Type: " + 
+      x.shoeType + 
+      "</p>" +
+      "<p>Shoes Size: " + 
+      x.shoeSize + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your shoes to the cart!");
+  var itemtype = x.type;
+  showShoes(itemtype);
 }
 
 function showCart() {
@@ -663,4 +838,5 @@ function removeItem(e){
   TOTAL_SALE -= Number(price);
   var total = document.querySelector(".navbar-cart");
   total.innerHTML = "Total: $" + TOTAL_SALE;
+  alert("Successfully removed from the cart!");
 }

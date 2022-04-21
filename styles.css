@@ -37,9 +37,6 @@ li a:hover {
   background-color: darkslateblue !important;
 }
 
-.navbar-cart:hover {
-  color: black;
-}
 
 .homepage {
   text-align: center;
@@ -84,4 +81,14 @@ li a:hover {
 img {
   width: 230px;
   height: 260px;
+}
+
+.skate-add-btn{
+  margin-top: -5em; 
+  margin-left: 9.3em;
+}
+
+.backpack-add-btn{
+  margin-top: -3.55em; 
+  margin-left: 9.3em;
 }
