@@ -235,7 +235,7 @@ var PRODUCTS = {
     {
       type: "shirts",
       shirtName: "Primitive x Naruto Shippuden Madara Uchiha Grey T-Shirt",
-      shirtSize: "Small, Medium, Large, XL",
+      shirtSize: "Small, Large, XL",
       price: 27.95,
       image: "images/shirts/backPrimitive4.webp",
     },
@@ -244,7 +244,7 @@ var PRODUCTS = {
     {
       type: "pants",
       pantsName:
-        "Dickies Skateboarding Embroidered Regular Fit Twill Desert Sand Pants",
+        "Dickies Skateboarding Regular Fit Desert Sand Pants",
       pantsSize: "32-32, 34-34, 36-36",
       price: 50.95,
       image: "images/pants/dickies1.webp",
@@ -280,7 +280,7 @@ var PRODUCTS = {
     {
       type: "pants",
       pantsName: "Theories Stamp Lounge Cord Alpine Pants",
-      pantsSize: "32-32, 34-34, 36-36, 38-38",
+      pantsSize: "32-32, 36-36, 38-38",
       price: 43.95,
       image: "images/pants/theories2.webp",
     },
@@ -366,7 +366,7 @@ var PRODUCTS = {
     },
     {
       type: "hats",
-      hatName: "Theories Hand Of Theories Strapback Hat Contrast Hunter Green",
+      hatName: "Theories Hand Of Theories Strapback Hat Hunter Green",
       price: 14.95,
       image: "images/hats/Theories2.webp",
     },
@@ -419,7 +419,7 @@ function skateboards(x) {
     "<p>Price:  $" + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addSkateboardsToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success skate-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success skateboard-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -449,7 +449,7 @@ function shoes(x) {
     "<p>Price:  $" + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addShoesToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success shoe-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -463,7 +463,7 @@ function shirts(x) {
     "<p>Price: $" + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addShirtsToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success shirt-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -477,7 +477,7 @@ function pants(x) {
     "<p>Price: $" + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addPantsToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success pants-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -491,7 +491,7 @@ function hoodies(x) {
     "<p>Price: $" + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addHoodiesToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success hoodie-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -504,7 +504,7 @@ function hats(x) {
     '<p>Price: $' + x.price + "</p>",
     '<p class="img-center"><button onclick=\'addHatsToCart(' +
       JSON.stringify(x) +
-      ')\' type="button" class="btn btn-success">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+      ')\' type="button" class="btn btn-success hat-add-btn">add to cart <i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
   ].join("");
 }
 
@@ -684,6 +684,36 @@ function addSkateboardsToCart(x) {
   alert("Added your skateboard to the cart!");
   var itemtype = x.type;
   showSkateboards(itemtype);
+}
+
+function addBackpacksToCart(x) {
+  TOTAL_SALE += x.price;
+  var html =
+    '<p class="navbar-cart"> Total: $' + TOTAL_SALE.toFixed(2) + "</p>";
+  html += TOTAL_SALE + $(".navbar-cart").html(html);
+  $("#cart").prepend(
+    '<div class="col-lg-3 col-sm-6">' +
+      '<div class="panel panel-default"><div class="panel-body">' +
+      '<p class="img-center"><img src="' + 
+      x.image + 
+      '"/></p>' +
+      "<p>Backpack Name: " + 
+      x.bagName + 
+      "</p>" +
+      "<p>Backpack Size: " + 
+      x.bagSize + 
+      "</p>" +
+      "<p>Waterproof?: " + 
+      x.waterproof + 
+      "</p>" +
+      '<p class="itemPrice">Price: $' + 
+      x.price + 
+      "</p>" +
+      '<p><button type="button" class="removeItem btn btn-success backpack-add-btn">Remove<i class="fa fa-cart-plus" aria-hidden="true"></i></button></p></div></div></div>',
+  );
+  alert("Added your backpack to the cart!");
+  var itemtype = x.type;
+  showBackpacks(itemtype);
 }
 
 function addHatsToCart(x) {

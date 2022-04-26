@@ -83,12 +83,37 @@ img {
   height: 260px;
 }
 
-.skate-add-btn{
-  margin-top: -5em; 
+.skateboard-add-btn{
+  margin-top: -4.99em; 
   margin-left: 9.3em;
 }
 
 .backpack-add-btn{
   margin-top: -3.55em; 
+  margin-left: 9.3em;
+}
+
+.shoe-add-btn{
+  margin-top: -3.55em; 
+  margin-left: 9.3em;
+}
+
+.shirt-add-btn{
+  margin-top: -0.06em; 
+  margin-left: 9.3em;
+}
+
+.pants-add-btn{
+  margin-top: -0.06em; 
+  margin-left: 9.3em;
+}
+
+.hoodie-add-btn{
+  margin-top: -0.06em; 
+  margin-left: 9.3em;
+}
+
+.hat-add-btn{
+  margin-top: 2.08em; 
   margin-left: 9.3em;
 }
