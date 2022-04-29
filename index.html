@@ -31,20 +31,19 @@
           <li>
             <a onclick="showShoes('shoes')">Shoes</a>
           </li>
+          <div class="dropdown">
+              <a><button style="font-size: 1em" class="dropbtn" onclick="myFunction()">Clothing
+                <i class="fa fa-caret-down"></i>
+              </button></a>
+            <div class="dropdown-content" id="myDropdown">
+                <a onclick="showShirts('shirts')">Shirts</a>
+                <a onclick="showPants('pants')">Pants</a>
+                <a onclick="showHoodies('hoodies')">Hoodies</a>
+                <a onclick="showHats('hats')">Hats</a>
+            </div>
+          </div>
           <li>
-            <a onclick="showShirts('shirts')">Shirts</a>
-          </li>
-          <li>
-            <a onclick="showPants('pants')">Pants</a>
-          </li>
-          <li>
-            <a onclick="showHoodies('hoodies')">Hoodies</a>
-          </li>
-          <li>
-            <a onclick="showHats('hats')">Hats</a>
-          </li>
-          <li>
-            <a class="navbar-cart cart-total" href="#cart" onclick="showCart()">
+            <a class="navbar-cart cart-total" onclick="showCart()">
               <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart:
               $0.00</a
             >
