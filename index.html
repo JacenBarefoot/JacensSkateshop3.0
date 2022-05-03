@@ -13,44 +13,35 @@
       rel="stylesheet"
       href="vendor/font-awesome-4.7.0/css/font-awesome.css"
     />
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" onclick="showHome('home')">JacensSkateshop</a>
+    <div class="topnav" id="myTopnav">
+      <a class="navbar-brand" onclick="showHome('home')">JacensSkateshop</a>
+      <a onclick="showSkateboards('skateboards')">Skateboards</a>
+      <a onclick="showBackpacks('backpacks')">Backpacks</a>
+      <a onclick="showShoes('shoes')">Shoes</a>
+      <div class="dropdown">
+          <a class="dropbtn" onclick="myFunction()">Clothing
+            <i class="fa fa-caret-down"></i>
+          </a>
+        <div class="dropdown-content" id="myDropdown">
+            <a onclick="showShirts('shirts')">Shirts</a>
+            <a onclick="showPants('pants')">Pants</a>
+            <a onclick="showHoodies('hoodies')">Hoodies</a>
+            <a onclick="showHats('hats')">Hats</a>
         </div>
-        <ul class="nav navbar-nav">
-          <li>
-            <a onclick="showSkateboards('skateboards')">Skateboards</a>
-          </li>
-          <li>
-            <a onclick="showBackpacks('backpacks')">Backpacks</a>
-          </li>
-          <li>
-            <a onclick="showShoes('shoes')">Shoes</a>
-          </li>
-          <div class="dropdown">
-              <a><button style="font-size: 1em" class="dropbtn" onclick="myFunction()">Clothing
-                <i class="fa fa-caret-down"></i>
-              </button></a>
-            <div class="dropdown-content" id="myDropdown">
-                <a onclick="showShirts('shirts')">Shirts</a>
-                <a onclick="showPants('pants')">Pants</a>
-                <a onclick="showHoodies('hoodies')">Hoodies</a>
-                <a onclick="showHats('hats')">Hats</a>
-            </div>
-          </div>
-          <li>
-            <a class="navbar-cart cart-total" onclick="showCart()">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart:
-              $0.00</a
-            >
-          </li>
-        </ul>
       </div>
-    </nav>
+      <a class="navbar-cart cart-total" onclick="showCart()">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart:
+        $0.00</a
+      >
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction1()">&#9776;</a>
+    </div>
     <div class="homepage products row">
       <h1>Welcome to JacensSkateShop</h1>
       <hr id="hr-1" />
