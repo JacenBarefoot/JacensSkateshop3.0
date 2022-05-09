@@ -131,24 +131,20 @@ img {
 }
 
 .dropdown-content {
-  margin-top: .46em;
   display: none;
   position: absolute;
   background-color: steelblue;
-  min-width: 108.82px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 106px !important;
+  margin-top: 62px;
+  margin-left: 0px;
   z-index: 1;
 }
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+
+.dropdown-content a{
+  width: 106px;
 }
 
-.dropdown-content a:hover {
+.dropdown-content:hover {
   background-color: steelblue;
 }
 
